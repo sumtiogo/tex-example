@@ -1,0 +1,83 @@
+% definition and package usage
+\documentclass[usenames,dvipsnames]{beamer}
+\usetheme{Madrid} % choose themes at http://www.hartwork.org/beamer-theme-matrix
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% title information
+\title[T1]{This is Title}
+\author[Ya-Hsuan Chang]{{\bf Pan Pan Chang}\\
+{\small Advisor: Hsuan-Tien Lin, Ph.D.}}
+\institute[NTU CLLab]{
+    {\scriptsize Computational Learning Laboratory}\\
+    {\scriptsize Dept. of Computer Science and Information Engineering}\\
+    {\scriptsize National Taiwan University}
+}
+\date{\today}
+
+\begin{document}
+
+% title page
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% start to create frame
+\begin{frame}{item with flow control}
+    a item example
+    \begin{itemize} % item with flow control
+        \item<1-> first % '-' means keep this item
+        \item<2> second % only appear in second slide
+        \item<3> third
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{block with pause}
+    \begin{block}{a block}
+        some text
+    \end{block}
+    \pause
+    \begin{exampleblock}{a example}
+        some example
+    \end{exampleblock}
+    \pause
+    \begin{alertblock}{alert}
+        $1+1 \ne 2$
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{column}
+    \begin{columns}
+        \column{.45\textwidth}  % control the width of each column
+        a column in left part.
+        \column{.45\textwidth}
+        a column in right part.
+    \end{columns}
+\end{frame}
+
+\begin{frame}{simple graph}
+    \includegraphics[width=0.7\textwidth]{cat.png}
+\end{frame}
+
+\begin{frame}{advance graph}
+    \begin{figure}
+        \centering
+        \caption{a sleepy cat}
+        \includegraphics[width=0.7\textwidth]{cat.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{table}
+    try this website: \url{http://truben.no/latex/table/}
+    \begin{table}
+        \begin{tabular}{l|l}
+            col 1   & col 2 \\ \hline
+            hi      & this  \\
+            is      & a     \\
+            example & ~     \\
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+\end{document}
